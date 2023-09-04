@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ComposeButtom</string>
+    <string name="app_name">ComposeButton</string>
+    <string name="button">Button</string>
+    <string name="clicked">Button clicked</string>
 </resources>

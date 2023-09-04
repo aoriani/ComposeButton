@@ -66,7 +66,7 @@ import io.aoriani.composebutton.ui.theme.MontserratFont
 
 @SuppressLint("ComposableNaming")
 @Composable
-internal fun drawButton(
+private fun drawButton(
     text: String,
     icon: ImageVector?,
     backgroundColor: Color,
@@ -114,7 +114,7 @@ internal fun drawButton(
 @SuppressLint("ComposableNaming")
 @Preview(showBackground = true, name = "Icon")
 @Composable
-fun drawButtonPreview() {
+internal fun drawButtonPreview() {
     ComposeButtonTheme {
         Box(Modifier.padding(16.dp)) {
             drawButton(
@@ -139,7 +139,7 @@ fun drawButtonPreview() {
 @SuppressLint("ComposableNaming")
 @Preview(showBackground = true, name = "No Icon")
 @Composable
-fun drawButtonNoIconPreview() {
+internal fun drawButtonNoIconPreview() {
     ComposeButtonTheme {
         Box(Modifier.padding(16.dp)) {
             drawButton(
@@ -164,7 +164,7 @@ fun drawButtonNoIconPreview() {
 @SuppressLint("ComposableNaming")
 @Preview(showBackground = true,  name = "Long Text")
 @Composable
-fun drawButtonLongTextPreview() {
+internal fun drawButtonLongTextPreview() {
     ComposeButtonTheme {
         Box(Modifier.padding(16.dp)) {
             drawButton(
@@ -189,7 +189,7 @@ fun drawButtonLongTextPreview() {
 @SuppressLint("ComposableNaming")
 @Preview(showBackground = true,  name = "RTL", locale = "fa")
 @Composable
-fun drawButtonBidirPreview() {
+internal fun drawButtonBidirPreview() {
     ComposeButtonTheme {
         Box(Modifier.padding(16.dp)) {
             drawButton(
@@ -213,7 +213,7 @@ fun drawButtonBidirPreview() {
 
 @SuppressLint("ComposableNaming")
 @Composable
-internal fun animateButton(
+private fun animateButton(
     text: String,
     icon: ImageVector?,
     backgroundColor: Color,
@@ -276,7 +276,7 @@ internal fun animateButton(
 @SuppressLint("ComposableNaming")
 @Preview(showBackground = true)
 @Composable
-fun animateButtonPreview() {
+internal fun animateButtonPreview() {
     ComposeButtonTheme {
         Box(Modifier.padding(16.dp)) {
             animateButton(
@@ -343,7 +343,7 @@ interface ButtonAnimation {
 
 @SuppressLint("ComposableNaming")
 @Composable
-internal fun stateButton(
+private fun stateButton(
     text: String,
     onClick: () -> Unit,
     icon: ImageVector?,
@@ -397,7 +397,7 @@ internal fun stateButton(
     )
 }
 
-infix fun Int.has(bit: Int) = this.and(bit) != 0
+private infix fun Int.has(bit: Int) = this.and(bit) != 0
 
 object ButtonDefaults {
     val colors = object : ButtonColors {
@@ -520,4 +520,3 @@ fun ButtonDisabledPreview() {
         }
     }
 }
-

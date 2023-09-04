@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import io.aoriani.composebuttom.R
+import io.aoriani.composebutton.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(
